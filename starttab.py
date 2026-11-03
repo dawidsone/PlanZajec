@@ -12,7 +12,7 @@ def budowa(master):
 
     label_czas = ctk.CTkLabel(frame_start, text="czas", font=("Arial", 48, "bold"), text_color="#1f6aa5")
     label_czas.pack(pady=10)
-
+#Czas
     def zegar():
         teraz = datetime.datetime.now()
         data = teraz.strftime("%d.%m.%Y")
@@ -21,6 +21,17 @@ def budowa(master):
         label_data.configure(text=data)
         label_czas.configure(text=czas)
         label_czas.after(1000, zegar)
+#Statystyki notatek i zadan
+    def statystyki():
+        stat = ctk.CTkFrame(frame_start, fg_color="transparent")
+        stat.pack(pady=30)
+
+        notatki=ctk.CTkFrame(stat, fg_color="blue", corner_radius=10)
+        notatki.grid(row=0, column=0, padx=15, )
+
+        ctk.CTkLabel(notatki, text="Notatki", font=("Arial",15)).pack()
+        
+
 
     zegar()
     return frame_start
