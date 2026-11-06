@@ -21,9 +21,9 @@ def budowa(master):
         elif wybor == "Ciemny":
             ctk.set_appearance_mode("dark")
         else:
-            ctk.set_appearance_mode("Purple")
+            ctk.set_appearance_mode("System")
 
-    menu = ctk.CTkOptionMenu(frame, values=["Purple", "Jasny", "Ciemny"], command=zmien_motyw)
+    menu = ctk.CTkOptionMenu(frame, values=["System", "Jasny", "Ciemny"], command=zmien_motyw)
     menu.pack(pady=10)
 
 #Zapisz
